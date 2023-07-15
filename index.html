@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Reset CSS -->
+        <link rel="stylesheet" href="./asset/reset.css" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="./asset/style.css" />
+        <!-- Favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="57x57"
+            href="./favicon/apple-icon-57x57.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="60x60"
+            href="./favicon/apple-icon-60x60.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="./favicon/apple-icon-72x72.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="76x76"
+            href="./favicon/apple-icon-76x76.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="114x114"
+            href="./favicon/apple-icon-114x114.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="./favicon/apple-icon-120x120.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="144x144"
+            href="./favicon/apple-icon-144x144.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            href="./favicon/apple-icon-152x152.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./favicon/apple-icon-180x180.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="./favicon/android-icon-192x192.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="./favicon/favicon-96x96.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./favicon/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+        <meta name="theme-color" content="#ffffff" />
+        <title>Music Player</title>
+    </head>
+    <body>
+        <div class="player">
+            <!-- Top -->
+            <div class="dashboard">
+                <!-- Header -->
+                <header>
+                    <h4>Now Playing:</h4>
+                    <h2>String 57th & 9th</h2>
+                </header>
+                <!-- CD -->
+                <div class="cd">
+                    <div class="cd-thumb"></div>
+                </div>
+                <div class="volume-block">
+                    <div class="btn-volume">
+                        <div class="volume-icon">
+                            <div class="btn btn-volume-high">
+                                <i class="fa-solid fa-volume-high"></i>
+                            </div>
+                            <div
+                                class="btn btn-volume-mute"
+                                style="display: none"
+                            >
+                                <i class="fa-solid fa-volume-xmark"></i>
+                            </div>
+                        </div>
+                        <input
+                            class="volume-progress"
+                            type="range"
+                            value="100"
+                            step="1"
+                            min="0"
+                            max="100"
+                        />
+                    </div>
+                </div>
+                <!-- Control -->
+                <div class="control">
+                    <div class="btn btn-repeat">
+                        <i class="fa-solid fa-rotate-right"></i>
+                    </div>
+                    <div class="btn btn-prev">
+                        <i class="fa-solid fa-backward-step"></i>
+                    </div>
+                    <div class="btn btn-toggle-play">
+                        <i class="fa-solid fa-play icon-play"></i>
+                        <i class="fa-solid fa-pause icon-pause"></i>
+                    </div>
+                    <div class="btn btn-next">
+                        <i class="fa-solid fa-forward-step"></i>
+                    </div>
+                    <div class="btn btn-random">
+                        <i class="fa-solid fa-shuffle"></i>
+                    </div>
+                </div>
+                <!-- Range -->
+                <input
+                    id="progress"
+                    class="progress"
+                    type="range"
+                    value="0"
+                    step="1"
+                    min="0"
+                    max="100"
+                />
+                <!-- Audio -->
+                <audio id="audio" src=""></audio>
+                <div class="time">
+                    <div class="start-time">00:00</div>
+                    <div class="end-time">00:00</div>
+                </div>
+            </div>
+            <!-- bottom -->
+            <div class="playlist"></div>
+        </div>
+        <script src="./lib/fontawesome/js/all.min.js"></script>
+        <script src="./handle.js"></script>
+    </body>
+</html>
